@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # CF_DDNS_RECORDS env var: comma-separated "zone:name" pairs
-# e.g. CF_DDNS_RECORDS="example.com:home.example.com"
+# e.g. CF_DDNS_RECORDS="example.com:home.example.com,example.com:www.example.com"
 if [[ -z "${CF_DDNS_RECORDS:-}" ]]; then
   echo "$(date): ERROR - CF_DDNS_RECORDS not set" >&2
   exit 1
